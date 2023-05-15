@@ -77,8 +77,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        MovePlane();
         anguloSen = Mathf.Sin(Mathf.Deg2Rad * angulos.z * 0.5f);
         anguloCos = Mathf.Cos(Mathf.Deg2Rad * angulos.z * 0.5f);
         qz.Set(0, 0, anguloSen, anguloCos);
@@ -101,8 +99,5 @@ public class PlayerController : MonoBehaviour
             direction = 1;
         }
         _rb.velocity = new Vector3(horizontal*speed, vertical*speed, speedTwoDirection * direction);
-    }
-    private void MovePlane()
-    {
     }
 }
